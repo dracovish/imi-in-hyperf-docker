@@ -32,7 +32,7 @@ return [
     'mainServer' => [
         'namespace' => 'ImiApp\ApiServer',
         'type' => Imi\Server\Type::HTTP,
-        'host' => '127.0.0.1',
+        'host' => '0.0.0.0',
         'port' => 9501,
         'configs' => [
             // 'worker_num'        =>  8,
