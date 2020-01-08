@@ -9,5 +9,11 @@
         "psr-4" : {
 			"ImiApp\\" : "./"
         }
-	}
+	},
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    }
 }

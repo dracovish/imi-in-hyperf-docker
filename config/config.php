@@ -1,37 +1,47 @@
 <?php
+
+declare(strict_types=1);
+/**
+ * This file is part of Hyperf.
+ *
+ * @link     https://www.hyperf.io
+ * @document https://doc.hyperf.io
+ * @contact  group@hyperf.io
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ */
 return [
     // 项目根命名空间
-    'namespace'    =>    'ImiApp',
+    'namespace' => 'ImiApp',
 
     // 配置文件
-    'configs'    =>    [
-        'beans'        =>    __DIR__ . '/beans.php',
+    'configs' => [
+        'beans' => __DIR__ . '/beans.php',
     ],
 
     // 扫描目录
-    'beanScan'    =>    [
+    'beanScan' => [
         'ImiApp\Listener',
         'ImiApp\Task',
     ],
 
     // 组件命名空间
-    'components'    =>  [
+    'components' => [
     ],
 
     // 主服务器配置
-    'mainServer'    =>    [
-        'namespace'    =>    'ImiApp\ApiServer',
-        'type'        =>    Imi\Server\Type::HTTP,
-        'host'        =>    '127.0.0.1',
-        'port'        =>    8080,
-        'configs'    =>    [
+    'mainServer' => [
+        'namespace' => 'ImiApp\ApiServer',
+        'type' => Imi\Server\Type::HTTP,
+        'host' => '127.0.0.1',
+        'port' => 9501,
+        'configs' => [
             // 'worker_num'        =>  8,
             // 'task_worker_num'   =>  16,
         ],
     ],
 
     // 子服务器（端口监听）配置
-    'subServers'        =>    [
+    'subServers' => [
         // 'SubServerName'   =>  [
         //     'namespace'    =>    'ImiApp\XXXServer',
         //     'type'        =>    Imi\Server\Type::HTTP,
@@ -41,7 +51,7 @@ return [
     ],
 
     // 连接池配置
-    'pools'    =>    [
+    'pools' => [
         // 主数据库
         // 'maindb'    =>    [
         //     // 同步池子
@@ -114,19 +124,19 @@ return [
     ],
 
     // 数据库配置
-    'db'    =>    [
+    'db' => [
         // 数默认连接池名
-        'defaultPool'    =>    'maindb',
+        'defaultPool' => 'maindb',
     ],
 
     // redis 配置
-    'redis' =>  [
+    'redis' => [
         // 数默认连接池名
-        'defaultPool'   =>  'redis',
+        'defaultPool' => 'redis',
     ],
 
     // 内存表配置
-    'memoryTable'   =>  [
+    'memoryTable' => [
         // 't1'    =>  [
         //     'columns'   =>  [
         //         ['name' => 'name', 'type' => \Swoole\Table::TYPE_STRING, 'size' => 16],
@@ -137,7 +147,7 @@ return [
     ],
 
     // 锁
-    'lock'  =>[
+    'lock' => [
         // 'list'  =>  [
         //     'atomic' =>  [
         //         'class' =>  'AtomicLock',
@@ -149,7 +159,7 @@ return [
     ],
 
     // atmoic 配置
-    'atomics'    =>  [
+    'atomics' => [
         // 'atomicLock'   =>  1,
     ],
 ];
